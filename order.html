@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart | AURA</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="brand">A U R A</a>
+        <div class="nav-links">
+            <a href="index.html">Discover</a>
+            <a href="menu.html">Collection</a>
+            <a href="order.html" class="active">Cart <span class="cart-badge">0</span></a>
+        </div>
+    </nav>
+
+    <main class="container" style="max-w: 800px;">
+        <h2 class="section-title">Your Bag</h2>
+        
+        <div id="cart-items"></div>
+
+        <div class="cart-total-container">
+            <span class="cart-total-label">Estimated Total</span>
+            <span class="cart-total-amount" id="cart-total">$0.00</span>
+        </div>
+
+        <div style="margin-top: 2rem;">
+            <button class="btn-primary" style="width: 100%; text-align: center; border: none; cursor: pointer;" onclick="alert('Proceeding to secure checkout.')">Secure Checkout</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
