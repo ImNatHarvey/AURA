@@ -74,14 +74,46 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: calc(100vh - 72px); /* Slightly shorter hero */
+    height: calc(100vh - 72px); 
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 0 20px;
-    background: linear-gradient(rgba(250, 250, 250, 0.4), rgba(250, 250, 250, 0.8)), url('https://images.unsplash.com/photo-1584916201218-f4242ceb4809?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    position: relative; /* Required to keep the video contained */
+    overflow: hidden;   /* Prevents the video from making the page too wide */
+}
+
+/* The Background Video */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center 25%;
+    z-index: -2; 
+}
+
+/* The Gradient Overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(250, 250, 250, 0.4), rgba(250, 250, 250, 0.8));
+    z-index: -1; 
+}
+
+.hero h1, 
+.hero p, 
+.hero .btn-primary {
+    position: relative;
+    z-index: 1; 
 }
 
 .hero h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); margin-bottom: 1rem; color: var(--text-main); }
