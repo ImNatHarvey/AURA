@@ -74,7 +74,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    height: 70vh; /* Slightly shorter hero */
+    height: calc(100vh - 72px); /* Slightly shorter hero */
     display: flex;
     flex-direction: column;
     justify-content: center;
